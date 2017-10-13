@@ -1,32 +1,26 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <cstring>
+#include <sstream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+using namespace std;
+int main ()
+{
+	int i, j=0;
+	char a[80];
+	for(i=0; i<80; i++){
+		cin.get(a[i]);
+		j++;
+		if(a[i]=='\n'){
+			break;
+		}
+	}
+	for(i=0; i<=j; i++){
+		if(a[i]==' '){
+			cout<<"%20";
+		}
+		else{
+			cout<<a[i];
+		}
+	}
+return 0;
+}
